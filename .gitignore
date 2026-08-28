@@ -24,6 +24,8 @@ ml/data/**
 !ml/data/**/.gitkeep
 ml/reports/*
 !ml/reports/.gitkeep
+!ml/reports/class_mapping.json
+
 *.pt
 *.pth
 *.h5

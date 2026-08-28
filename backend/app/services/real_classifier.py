@@ -110,10 +110,11 @@ class RealClassifierService(BaseClassifierService):
 
         # 2. Resolve checkpoint path (prefer settings.MODEL_PATH, fallback to _BEST_CHECKPOINT / _FALLBACK_MODEL)
         model_path = getattr(settings, "MODEL_PATH", _BEST_CHECKPOINT)
-        if not os.path.exists(model_path) or not os.path.exists(_BEST_CHECKPOINT):
+        if not os.path.exists(model_path) or (not os.path.exists(_BEST_CHECKPOINT) and not os.getenv("MODEL_PATH")):
             model_path = _BEST_CHECKPOINT
         if not os.path.exists(model_path):
             model_path = _FALLBACK_MODEL
+
 
 
 

@@ -1,0 +1,34 @@
+# Environment & OS
+.env
+.env.local
+.env.*.local
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Backend database & uploads
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Node & Frontend build output
+node_modules/
+frontend/dist/
+frontend/node_modules/
+
+# Machine Learning Workspace Datasets & Large Models (Recursive)
+ml/data/**
+!ml/data/**/.gitkeep
+ml/reports/*
+!ml/reports/.gitkeep
+*.pt
+*.pth
+*.h5
+*.onnx
+*.keras
+
+# Artifacts & System logs
+.system_generated/
